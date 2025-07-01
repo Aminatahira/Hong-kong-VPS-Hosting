@@ -3,12 +3,2248 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello world project</title>
+    <title>
+      Hong Kong VPS Hosting – Speed, Flexibility & No Red Tape | ARZ Host
+    </title>
+    <meta
+      name="description"
+      content="Professional Hong Kong VPS hosting with no ICP license required. Instant deployment, SSD/NVMe storage, 99.99% uptime SLA. Starting from $9.50/month."
+    />
+    <meta
+      name="keywords"
+      content="vps hosting hong kong, hong kong vps, vps hosting, hong kong server, asia vps, no icp license"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --background: rgb(237, 229, 222);
+        --foreground: rgb(61, 61, 61);
+        --card: rgb(255, 255, 255);
+        --card-foreground: rgb(61, 61, 61);
+        --primary: rgb(114, 82, 55);
+        --primary-foreground: rgb(237, 229, 222);
+        --secondary: rgb(166, 123, 91);
+        --secondary-foreground: rgb(61, 61, 61);
+        --muted: rgb(224, 216, 209);
+        --muted-foreground: rgb(102, 102, 102);
+        --accent: rgb(217, 188, 129);
+        --accent-foreground: rgb(61, 61, 61);
+        --border: rgb(214, 203, 194);
+        --radius: 6px;
+      }
+
+      body {
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        line-height: 1.5;
+        color: var(--foreground);
+        background-color: var(--background);
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* Header Styles */
+      header {
+        background-color: var(--card);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 0;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo svg {
+        width: 2rem;
+        height: 2rem;
+        color: var(--primary);
+      }
+
+      .logo span {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        color: var(--foreground);
+        text-decoration: none;
+        transition: color 0.15s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.15s ease;
+        white-space: nowrap;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+      }
+
+      .btn-primary:hover {
+        background-color: rgb(95, 67, 44);
+      }
+
+      .btn-secondary {
+        background-color: var(--secondary);
+        color: var(--primary-foreground);
+      }
+
+      .btn-outline {
+        background-color: var(--background);
+        color: var(--foreground);
+        border: 1px solid var(--border);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--muted);
+      }
+
+      .btn-lg {
+        padding: 0.75rem 2rem;
+        height: 2.75rem;
+      }
+
+      /* Badge */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.125rem 0.625rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background-color: var(--accent);
+        color: var(--accent-foreground);
+        margin-bottom: 1.5rem;
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 5rem 0;
+        background: linear-gradient(to bottom, var(--background), var(--muted));
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3.75rem);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--muted-foreground);
+        max-width: 48rem;
+        margin: 0 auto 2rem;
+      }
+
+      .hero .btn-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Video Section */
+      .video-section {
+        padding: 4rem 0;
+        background-color: var(--card);
+        text-align: center;
+      }
+
+      .video-container {
+        max-width: 64rem;
+        margin: 0 auto;
+        aspect-ratio: 16/9;
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .video-container iframe {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Section Titles */
+      .section-title {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      /* Grid Layouts */
+      .grid {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .grid-5 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      /* Card Styles */
+      .card {
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .card-header {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .card-title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-icon {
+        width: 3rem;
+        height: 3rem;
+        color: var(--primary);
+        margin: 0 auto 1rem;
+      }
+
+      .card-price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .card-price small {
+        font-size: 0.875rem;
+        color: var(--muted-foreground);
+      }
+
+      /* Features List */
+      .features-list {
+        list-style: none;
+        margin-bottom: 1rem;
+      }
+
+      .features-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .check-icon {
+        width: 1rem;
+        height: 1rem;
+        color: #22c55e;
+        flex-shrink: 0;
+      }
+
+      /* Feature Grid */
+      .feature-grid {
+        padding: 5rem 0;
+      }
+
+      .feature-card {
+        text-align: center;
+      }
+
+      .feature-emoji {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Pricing Section */
+      .pricing {
+        padding: 5rem 0;
+      }
+
+      .pricing-group {
+        margin-bottom: 4rem;
+      }
+
+      .pricing-group h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        padding: 5rem 0;
+      }
+
+      .testimonial-card {
+        text-align: left;
+      }
+
+      .stars {
+        display: flex;
+        gap: 0.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .star {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: #fbbf24;
+        color: #fbbf24;
+      }
+
+      .testimonial-quote {
+        color: var(--muted-foreground);
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+
+      .testimonial-author {
+        font-weight: 600;
+      }
+
+      .testimonial-title {
+        font-size: 0.875rem;
+        color: var(--muted-foreground);
+      }
+
+      /* FAQ Section */
+      .faq {
+        padding: 5rem 0;
+        background-color: var(--muted);
+      }
+
+      .faq-container {
+        max-width: 64rem;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .faq-answer {
+        color: var(--muted-foreground);
+      }
+
+      /* CTA Section */
+      .cta {
+        padding: 5rem 0;
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+        text-align: center;
+      }
+
+      .cta h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        max-width: 32rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta .btn-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+
+      .cta .features-text {
+        font-size: 0.875rem;
+        opacity: 0.9;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--card);
+        border-top: 1px solid var(--border);
+        padding: 3rem 0;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-title {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: var(--muted-foreground);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary);
+      }
+
+      .footer-contact {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .footer-contact svg {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid var(--border);
+        padding-top: 2rem;
+        text-align: center;
+        color: var(--muted-foreground);
+      }
+
+      .external-icon {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero .btn-group {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .pricing .grid-5 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Sections */
+      .section {
+        padding: 5rem 0;
+      }
+
+      .section-muted {
+        background-color: var(--muted);
+      }
+    </style>
   </head>
-
   <body>
-    <div id="root"></div>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+              <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+              <line x1="6" x2="6.01" y1="6" y2="6" />
+              <line x1="6" x2="6.01" y1="18" y2="18" />
+            </svg>
+            <span>ARZ Host</span>
+          </div>
+          <div class="nav-links">
+            <a href="https://arzhost.com/vps/">VPS</a>
+            <a href="https://arzhost.com/region-based-vps/">VPS Region</a>
+            <a href="https://arzhost.com/lifetime-web-hosting/"
+              >Lifetime Web Hosting</a
+            >
+            <a href="https://www.arzhost.com/about-us/">About Us</a>
+            <a href="https://www.arzhost.com/contact-us/">Contact</a>
+          </div>
+          <a href="https://arzhost.com/vps/" class="btn btn-primary"
+            >Get Started</a
+          >
+        </nav>
+      </div>
+    </header>
 
-    <script type="module" src="/client/main.tsx"></script>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge">No ICP License Required</div>
+        <h1>Hong Kong VPS Hosting – Speed, Flexibility & No Red Tape</h1>
+        <p>
+          Craving powerful server performance that's optimized for Asia and the
+          world—without any licensing headaches? Our
+          <strong>Hong Kong VPS Hosting</strong> delivers instant deployment,
+          unbeatable flexibility, and blazing-fast connectivity with no ICP
+          license required.
+        </p>
+        <div class="btn-group">
+          <a href="https://arzhost.com/vps/" class="btn btn-primary btn-lg"
+            >👉 Launch Your VPS in Minutes</a
+          >
+          <a href="https://arzhost.com/" class="btn btn-outline btn-lg"
+            >Learn More About ARZ Host</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="video-section">
+      <div class="container">
+        <h2 class="section-title">See Hong Kong VPS in Action</h2>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/p8qVXz_2mPI"
+            title="Hong Kong VPS Hosting Overview"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Reasons Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">🚀 Top Reasons to Choose Hong Kong VPS</h2>
+        <div class="grid grid-4">
+          <div class="card feature-card">
+            <div class="card-header">
+              <svg
+                class="card-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.93 4.93 4.24 4.24" />
+                <path d="m14.83 9.17 4.24-4.24" />
+                <path d="m14.83 14.83 4.24 4.24" />
+                <path d="m9.17 14.83-4.24 4.24" />
+                <circle cx="12" cy="12" r="4" />
+              </svg>
+              <h3 class="card-title">🌐 Strategic Asia-Pacific Location</h3>
+            </div>
+            <p>
+              Powered by Hong Kong's prime internet exchange infrastructure,
+              your server delivers stellar connectivity across mainland China,
+              Southeast Asia, and the rest of the world.
+            </p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="card-header">
+              <svg
+                class="card-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" />
+              </svg>
+              <h3 class="card-title">
+                ⚡ High-Speed Performance with SSD/NVMe
+              </h3>
+            </div>
+            <p>
+              Every plan features ultra-fast SSD or NVMe storage and a 99.99%
+              uptime SLA—so your site or app stays online and responsive around
+              the clock.
+            </p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="card-header">
+              <svg
+                class="card-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                />
+              </svg>
+              <h3 class="card-title">
+                🛡️ ICP-Free Hosting, Instant Deployment
+              </h3>
+            </div>
+            <p>
+              Skip the red tape—hosting in Hong Kong requires no ICP license, so
+              you can go live instantly without waiting for bureaucratic
+              approval.
+            </p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="card-header">
+              <svg
+                class="card-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" />
+                <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                <path d="M12 2v2" />
+                <path d="M12 22v-2" />
+                <path d="m1.05 9 1.73 1" />
+                <path d="m21.22 9-1.73 1" />
+                <path d="M8 12H2" />
+                <path d="M22 12h-6" />
+                <path d="m1.05 15 1.73-1" />
+                <path d="m21.22 15-1.73-1" />
+              </svg>
+              <h3 class="card-title">🔧 Root Access & Full Customization</h3>
+            </div>
+            <p>
+              Enjoy total control with root access on every plan. Install your
+              tools, tweak firewall rules, and scale exactly how you want.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-muted">
+      <div class="container">
+        <h2 class="section-title">💡 Features Included in Every Plan</h2>
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="feature-emoji">⚙️</div>
+            <h3 class="card-title">Full Root Access</h3>
+            <p>Total server control from day one</p>
+          </div>
+          <div class="card">
+            <div class="feature-emoji">💽</div>
+            <h3 class="card-title">SSD / NVMe Storage</h3>
+            <p>Lightning-fast disk I/O for applications</p>
+          </div>
+          <div class="card">
+            <div class="feature-emoji">🧩</div>
+            <h3 class="card-title">Linux & Windows Support</h3>
+            <p>Ubuntu, CentOS, Debian, Windows Server, and more</p>
+          </div>
+          <div class="card">
+            <div class="feature-emoji">🌐</div>
+            <h3 class="card-title">IPv4 & IPv6 Included</h3>
+            <p>Future-ready connectivity</p>
+          </div>
+          <div class="card">
+            <div class="feature-emoji">🔒</div>
+            <h3 class="card-title">DDoS Protection</h3>
+            <p>Server hardening against attacks</p>
+          </div>
+          <div class="card">
+            <div class="feature-emoji">📊</div>
+            <h3 class="card-title">99.99% Uptime SLA</h3>
+            <p>Guaranteed reliability</p>
+          </div>
+          <div class="card">
+            <div class="feature-emoji">👨‍💻</div>
+            <h3 class="card-title">24/7 Expert Support</h3>
+            <p>Always here to help in English</p>
+          </div>
+          <div class="card">
+            <div class="feature-emoji">⚡</div>
+            <h3 class="card-title">Instant Setup</h3>
+            <p>Your VPS is deployed within minutes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section class="pricing">
+      <div class="container">
+        <h2 class="section-title">💵 Hong Kong VPS Pricing Plans</h2>
+
+        <!-- Standard VPS Plans -->
+        <div class="pricing-group">
+          <h3>Standard VPS Plans</h3>
+          <div class="grid grid-5">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Starter VPS</h4>
+                <div class="card-price">$12.50 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >1 vCore CPU
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >2 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >20 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >250 Mbps network
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                Ideal for small projects or testing servers
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Choose Plan</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Value VPS</h4>
+                <div class="card-price">$16.00 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >1 vCore CPU
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >2 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >40 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >250 Mbps network
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                Great for simple websites or low-traffic apps
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Choose Plan</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Essential VPS</h4>
+                <div class="card-price">$34.00 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >2 vCore CPU
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >4 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >80 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >500 Mbps network
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                Perfect for growing businesses, small eCommerce
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Choose Plan</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Comfort VPS</h4>
+                <div class="card-price">$54.00 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >4 vCore CPU
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >8 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >160 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >1 Gbps network
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                Built for production apps and mid-scale deployments
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Choose Plan</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Elite VPS</h4>
+                <div class="card-price">$60.00 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >8 vCore CPU
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >8–32 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >160–640 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >2 Gbps network
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                Resource-intensive apps, databases, large-scale platforms
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Choose Plan</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- HH Series -->
+        <div class="pricing-group">
+          <h3>🏋️‍♂️ High-Performance HH Series</h3>
+          <div class="grid grid-3" style="max-width: 64rem; margin: 0 auto">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">HH 1</h4>
+                <div class="card-price">$9.50 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >1 AMD EPYC Milan core
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >2 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >10 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >1 Gbps & 1 TB bandwidth
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                Entry-level high-performance option
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Order Now</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">HH 2</h4>
+                <div class="card-price">$17.00 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >2 AMD EPYC Milan cores
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >4 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >20 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >1 Gbps & 2 TB bandwidth
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                For heavier usage and swift multitasking
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Order Now</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">HH 3</h4>
+                <div class="card-price">$36.00 <small>/month</small></div>
+              </div>
+              <ul class="features-list">
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >2 AMD EPYC Milan cores
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >8 GB RAM
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >35 GB SSD
+                </li>
+                <li>
+                  <svg
+                    class="check-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22,4 12,14.01 9,11.01" /></svg
+                  >1 Gbps & 4 TB bandwidth
+                </li>
+              </ul>
+              <p
+                style="
+                  font-size: 0.75rem;
+                  color: var(--muted-foreground);
+                  margin-bottom: 1rem;
+                "
+              >
+                Perfect for data-heavy workloads
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Order Now</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- CB Series -->
+        <div class="pricing-group">
+          <h3>🛠️ Custom CB-Series VPS</h3>
+          <div class="grid grid-4">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">CB Starter</h4>
+                <div class="card-price">$76.00 <small>/month</small></div>
+              </div>
+              <p style="font-size: 0.875rem; margin-bottom: 1rem">
+                4 vCore • 8 GB RAM • 50 GB NVMe or 200 GB SSD
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Configure</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">CB Value</h4>
+                <div class="card-price">$86.00 <small>/month</small></div>
+              </div>
+              <p style="font-size: 0.875rem; margin-bottom: 1rem">
+                6 vCore • 16 GB RAM • 100 GB NVMe or 400 GB SSD
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Configure</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">CB Essential</h4>
+                <div class="card-price">$101.00 <small>/month</small></div>
+              </div>
+              <p style="font-size: 0.875rem; margin-bottom: 1rem">
+                8 vCore • 30 GB RAM • 200 GB NVMe or 800 GB SSD
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Configure</a
+              >
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">CB Comfort</h4>
+                <div class="card-price">$131.00 <small>/month</small></div>
+              </div>
+              <p style="font-size: 0.875rem; margin-bottom: 1rem">
+                10 vCore • 60 GB RAM • 400 GB NVMe or 1.6 TB SSD
+              </p>
+              <a
+                href="https://arzhost.com/vps/"
+                class="btn btn-primary"
+                style="width: 100%"
+                >Configure</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="section section-muted">
+      <div class="container">
+        <h2 class="section-title">🎯 Who Should Choose Hong Kong VPS?</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 class="card-title">Global eCommerce Sites</h3>
+            <p>Low-latency access for Asian shoppers</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">VPN & Proxy Servers</h3>
+            <p>Fast, censorship-free connection points</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Developers & Agencies</h3>
+            <p>Ideal for client projects and staging</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">SaaS Platforms</h3>
+            <p>Scalable and globally accessible infrastructure</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Content Creators</h3>
+            <p>Serve regional and international audiences easily</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">💬 Customer Testimonials</h2>
+        <div class="grid grid-3">
+          <div class="card testimonial-card">
+            <div class="stars">
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+            </div>
+            <p class="testimonial-quote">
+              "We switched to Hong Kong VPS for its speed and simplicity—no
+              pesky ICP delays. Our site loads super fast across Asia!"
+            </p>
+            <div>
+              <p class="testimonial-author">Yuki Wong</p>
+              <p class="testimonial-title">Online Store Owner</p>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="stars">
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+            </div>
+            <p class="testimonial-quote">
+              "Ideal for our VPN service. Setup was minutes, speeds are
+              excellent, and support is always responsive."
+            </p>
+            <div>
+              <p class="testimonial-author">Shoaib Malik</p>
+              <p class="testimonial-title">Security Engineer</p>
+            </div>
+          </div>
+
+          <div class="card testimonial-card">
+            <div class="stars">
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+              <svg
+                class="star"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"
+                />
+              </svg>
+            </div>
+            <p class="testimonial-quote">
+              "Great uptime and performance. SSD storage with instant deployment
+              makes it perfect for dev work."
+            </p>
+            <div>
+              <p class="testimonial-author">Rajiv Sharma</p>
+              <p class="testimonial-title">App Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="section-title">❓ Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3 class="faq-question">
+              Do I need an ICP license for Hong Kong hosting?
+            </h3>
+            <p class="faq-answer">
+              No—Hong Kong VPS doesn't require ICP, so you can launch
+              immediately without legal delays.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">How fast is the setup process?</h3>
+            <p class="faq-answer">
+              Your VPS is provisioned instantly—no waiting, no approvals
+              required.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Can I scale the server later?</h3>
+            <p class="faq-answer">
+              Absolutely! Upgrade CPU, RAM, or storage anytime, preserving your
+              setup and uptime.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">
+              Is technical support available in English?
+            </h3>
+            <p class="faq-answer">
+              Yes—24/7 English-speaking support staff are ready to assist you
+              whenever needed.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">Are backups included?</h3>
+            <p class="faq-answer">
+              Optional backup services are available—weekly snapshots and easy
+              restore are just a click away.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question">What OS options do you offer?</h3>
+            <p class="faq-answer">
+              Ubuntu, Debian, CentOS, AlmaLinux, and Windows Server versions are
+              all supported.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>✅ Ready to Start?</h2>
+        <p>
+          Host smart, scale globally—without licensing hurdles. Choose your
+          perfect <strong>Hong Kong VPS</strong> plan and be online in minutes.
+        </p>
+        <div class="btn-group">
+          <a href="https://arzhost.com/vps/" class="btn btn-secondary btn-lg"
+            >👉 Get Started Now</a
+          >
+          <a
+            href="https://www.arzhost.com/contact-us/"
+            class="btn btn-outline btn-lg"
+            style="
+              color: var(--primary-foreground);
+              border-color: var(--primary-foreground);
+            "
+            >Chat with Support</a
+          >
+        </div>
+        <div class="features-text">
+          🛡️ SSD/NVMe | ⚙️ Instant Deployment | 💬 24/7 Support | 💳 Flexible
+          Billing
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="logo" style="margin-bottom: 1rem">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                <line x1="6" x2="6.01" y1="6" y2="6" />
+                <line x1="6" x2="6.01" y1="18" y2="18" />
+              </svg>
+              <span style="font-size: 1.25rem; font-weight: 700">ARZ Host</span>
+            </div>
+            <p style="color: var(--muted-foreground); margin-bottom: 1rem">
+              Professional <strong>VPS hosting Hong Kong</strong> solutions with
+              no ICP requirements and instant deployment.
+            </p>
+            <div class="footer-contact">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <span>+1 (631) 594-8060</span>
+            </div>
+            <div class="footer-contact">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="m4.93 4.93 4.24 4.24" />
+                <path d="m14.83 9.17 4.24-4.24" />
+                <path d="m14.83 14.83 4.24 4.24" />
+                <path d="m9.17 14.83-4.24 4.24" />
+                <circle cx="12" cy="12" r="4" />
+              </svg>
+              <a href="https://arzhost.com/" style="color: var(--primary)"
+                >arzhost.com</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://arzhost.com/vps/"
+                  >VPS
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="https://arzhost.com/region-based-vps/"
+                  >VPS Region
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="https://arzhost.com/lifetime-web-hosting/"
+                  >Lifetime Web Hosting
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Company</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.arzhost.com/about-us/"
+                  >About Us
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/contact-us/"
+                  >Contact Us
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Legal</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://www.arzhost.com/terms-conditions/"
+                  >Terms and Conditions
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/privacy-policy/"
+                  >Privacy Policy
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.arzhost.com/disclaimer/"
+                  >Disclaimer
+                  <svg
+                    class="external-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="m7 17 10-10" /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 ARZ Host. All rights reserved. | Professional Hong Kong
+            VPS hosting solutions.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
